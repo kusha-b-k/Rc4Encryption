@@ -12,13 +12,24 @@ import android.widget.TextView;
 
 public class Rc4MainActivity extends AppCompatActivity {
 
-    EditText mMessage;
-    EditText mshowmesage;
-    TextView inkey,outkey;
-    Button mEncrypt;
-    Button mDecrypt;
-    EditText mEncryptKey;
-    EditText mDecryptkey;
+    private EditText mMessage;
+    private EditText mshowmesage;
+    private TextView inkey,outkey;
+    private Button mEncrypt;
+    private Button mDecrypt;
+    private EditText mEncryptKey;
+    private EditText mDecryptkey;
+
+
+    private String mUserMessage;
+
+    private String mEncryptionKey;
+
+    private String mDecryptionKey;
+
+
+
+
 
 
     @Override
@@ -34,12 +45,35 @@ public class Rc4MainActivity extends AppCompatActivity {
 
 
         mEncrypt = (Button)findViewById(R.id.button);
+
         mDecrypt = (Button)findViewById(R.id.button2);
 
+        //decrypt is invisible
+        mDecrypt.setVisibility(View.INVISIBLE);
 
         mshowmesage  =(EditText) findViewById(R.id.editText4);
+
         outkey = (TextView) findViewById(R.id.textView2);
+        outkey.setVisibility(View.INVISIBLE);
+
+
         mDecryptkey = (EditText)findViewById(R.id.editText3);
+        mDecryptkey.setVisibility(View.INVISIBLE);
+
+
+
+
+        //read the user message
+        mUserMessage = mMessage.getText().toString();
+
+        //read the encryption key
+        mEncryptionKey =  mEncryptKey.getText().toString();
+
+        //read the decryption key
+        mDecryptionKey =mDecryptkey.getText().toString();
+
+
+
 
 
 
@@ -47,6 +81,7 @@ public class Rc4MainActivity extends AppCompatActivity {
         mEncrypt.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // Perform Encryption here
+
             }
         });
 
