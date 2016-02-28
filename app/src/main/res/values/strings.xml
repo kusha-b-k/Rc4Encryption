@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Rc4Encryption</string>
+    <string name="action_settings">Settings</string>
+    <string name="message">messgae</string>
+
+    <string name="KEY">Encryption KEY</string>
+
+    <string name="encrypt">Encrypt</string>
+    <string name="dec">Decrypt</string>
+    <string name="dkey">PLEASE ENTER KEY</string>
+
+
+</resources>
