@@ -13,7 +13,7 @@ import android.widget.TextView;
 public class Rc4MainActivity extends AppCompatActivity {
 
     private EditText mMessage;
-    private EditText mshowmesage;
+    private static EditText mshowmesage;
     private TextView inkey,outkey;
     private Button mEncrypt;
     private Button mDecrypt;
@@ -26,9 +26,6 @@ public class Rc4MainActivity extends AppCompatActivity {
     private String mEncryptionKey;
 
     private String mDecryptionKey;
-
-
-
 
 
 
@@ -53,12 +50,16 @@ public class Rc4MainActivity extends AppCompatActivity {
 
         mshowmesage  =(EditText) findViewById(R.id.editText4);
 
+
+        //invisible
         outkey = (TextView) findViewById(R.id.textView2);
         outkey.setVisibility(View.INVISIBLE);
 
 
         mDecryptkey = (EditText)findViewById(R.id.editText3);
         mDecryptkey.setVisibility(View.INVISIBLE);
+
+
 
 
 
@@ -78,9 +79,14 @@ public class Rc4MainActivity extends AppCompatActivity {
 
 
 
+
         mEncrypt.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // Perform Encryption here
+
+               // mshowmesage.setText(encrypt(cipher));
+
+
 
             }
         });
@@ -95,10 +101,10 @@ public class Rc4MainActivity extends AppCompatActivity {
         });
 
 
-
-
-
     }
+
+
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
