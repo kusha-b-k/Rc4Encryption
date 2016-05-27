@@ -1,4 +1,4 @@
-/*uint32_t P[18];
+uint32_t P[18];
 uint32_t S[4][256];
 
 uint32_t f (uint32_t x) {
@@ -31,9 +31,7 @@ void decrypt (uint32_t & L, uint32_t & R) {
 }
 
 {
-   // ...
-   // initializing the P-array and S-boxes with values derived from pi; omitted in the example
-   // ...
+   
    for (int i=0 ; i<18 ; ++i)
       P[i] ^= key[i % keylen];
    uint32_t L = 0, R = 0;
@@ -46,4 +44,4 @@ void decrypt (uint32_t & L, uint32_t & R) {
          encrypt (L, R);
          S[i][j] = L; S[i][j+1] = R;
       }
-}*/
+}
