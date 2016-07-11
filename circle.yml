@@ -1,7 +1,5 @@
 # This is the circle ci yml file for android sdk 23
 # Build configuration for Circle CI
-#
-
 general:
     artifacts:
         - /home/ubuntu/Rc4Encryption/app/build/outputs/apk/
