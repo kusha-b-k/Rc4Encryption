@@ -1,6 +1,6 @@
 //blowfis algor
 uint64_t P[18];
-uint64_t S[4][256];
+uint64_t S[4][1024];
 
 uint32_t f (uint32_t x) {
    uint32_t h = S[0][x >> 24] + S[1][x >> 16 & 0xff];
