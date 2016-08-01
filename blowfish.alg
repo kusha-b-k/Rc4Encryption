@@ -15,7 +15,7 @@ void encrypt (uint32_t & L, uint32_t & R) {
       L ^= f(R);
    }
    L ^= P[16];
-   R ^= P[17];
+   R ^= P[18];
    swap (L, R);
 }
 
@@ -41,7 +41,7 @@ void decrypt (uint32_t & L, uint32_t & R) {
       encrypt (L, R);
       P[i] = L; P[i+1] = R;
    }
-   for (int i=0 ; i<4 ; ++i)
+   for (int i=0 ; i<8 ; ++i)
       for (int j=0 ; j<256; j+=2) {
          encrypt (L, R);
          S[i][j] = L; S[i][j+1] = R;
